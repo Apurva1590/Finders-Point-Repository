@@ -1,0 +1,94 @@
+.navbar
+{
+border-radius:0px !important;
+margin-bottom:0px !important;
+}
+
+body > div > div > div > section {
+    padding: 70px 0 !important;
+}
+
+
+.no-margin {
+    padding: 0 !important;
+}
+
+#email {
+  background: #ffffff;
+  padding-bottom: 0px;
+  padding-top: 0px; 
+}
+
+.searchbutton {
+padding: 6px 40px;
+}
+
+.backtoseachbutton {
+padding: 5px 10px;
+}
+
+#carousel-slider {
+  position: relative;
+}
+
+#carousel-slider .carousel-indicators {
+  bottom: -25px;
+}
+
+#carousel-slider .carousel-indicators li {
+  border: 1px solid #ffbd20;
+}
+
+#carousel-slider a i {
+  border: 1px solid #777;
+  border-radius:50%;
+  font-size: 28px;
+  height: 50px;
+  padding: 8px;
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  color:#777;
+}
+
+#carousel-slider a i:hover {
+  background:#bfbfbf;
+  color:#fff;
+  border: 1px solid #bfbfbf;
+}
+
+#carousel-slider 
+.carousel-control {
+  width:inherit;
+}
+
+#carousel-slider .carousel-control.left i {
+  left:-25px
+}
+
+#carousel-slider .carousel-control.right i {
+  right: -25px;
+}
+
+#carousel-slider
+.carousel-control.left, 
+#carousel-slider
+.carousel-control.right {
+  background: none;
+}
+
+
+/*
+
+.has-feedback .form-control-feedback {
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  color: #555;
+}
+
+.has-feedback .form-control {
+  padding-left: 42.5px;
+}*/

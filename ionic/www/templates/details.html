@@ -1,0 +1,108 @@
+<ion-view title="Professtional's Profile" id="details" style="background-color:#d2322d;">
+<!--
+    <ion-header-bar align-title="center" class="bar-positive">
+       <h1 class="title">Details</h1>
+        <button class="button button-clear pull-left" type="button" ui-sref="professionalslist">Back</button> </br>
+    
+   
+        <button class="button button-icon ion-more pull-right" ng-click="popover.show($event)">
+        </button>
+  
+  
+  </ion-header-bar>
+-->    
+    
+  <ion-nav-buttons side="left"> <!-- left -->
+   <button class="button back-button buttons button-clear header-item" ng-click="goBack()">
+      <i class="icon ion-ios-arrow-back"> Back</i> 
+    </button>
+ </ion-nav-buttons>
+
+ <ion-nav-buttons side="right"> <!-- right -->
+   <button class="button button-icon ion-more" ng-click="popover.show($event)"></button>
+ </ion-nav-buttons>
+    
+    
+    
+  <ion-content class="padding">
+      
+        
+
+<!--
+<div class="list">
+        <div class="card"> 
+            <div class="item item-avatar">
+                   
+                     <h3>Name: {{professional.fname}}</h3>
+                     <h3>Email: {{professional.email}}</h3>
+                    <h3>Designation: {{professional.designation}}</h3>
+                     <h3>City: {{professional.city}}</h3>
+                    
+                  </div>  
+                
+            </div>
+            </div>
+-->
+      </div>
+      
+<div class="list card">
+
+  <div class="item item-avatar">
+    <img src="../img/ionic.png">
+    <h2>{{professional.fname}} {{professional.lname}}</h2>
+    <p>{{professional.designation}}, {{professional.city}}</p>
+  </div>
+
+  <div class="item item-body">
+<!--    <img class="full-image" src="">-->
+    <p>    
+      <h3>Email: {{professional.email}}</h3>
+     <h3>Mobile Number: </h3>
+      <h3>Phone Number: </h3>
+       <h3>Address: {{professional.address}}</h3>
+       <h3>City: {{professional.city}}</h3>
+       <h3>State: {{professional.state}}</h3>
+       <h3>Country: {{professional.country}}</h3>
+       <h3>Pincode: {{professional.pincode}}</h3>
+       <h3>Company Name: {{professional.company}}</h3>
+       <h3>Meeting Time:From: {{professional.timefrom}}  To: {{professional.timeto}} Days: {{professional.days}}</h3>
+       <h3>Work Details: {{professional.workdescription}}</h3>
+       <h3>Reviews:{{professional.reviews.comment}}</h3>
+        </p>
+   
+  </div>
+
+</div>   
+
+
+
+<!--
+      <div class="card">
+          <div class="item item-body item-text-wrap">
+               <img ng-src="{{baseURL+professional.image}}" alt="Image">
+                <h2>{{professional.fname}} {{professional.lname}}</h2>
+                <p>{{professional.designation}}, {{professional.city}}</p>
+          </div>
+      </div>
+-->
+      
+      <div class="row">
+            <div class="col col-offset-10">
+                   <h4>Customer Reviews &nbsp;&nbsp;&nbsp;
+                       </h4>
+                    <ul class="list">
+                        <li ng-repeat="review in professional.reviews">
+                          <blockquote>
+                             <p>{{review.rating}} Stars</p>
+                             <p>{{review.comment}}</p>
+                             <footer>{{review.author}}, {{review.date | date:'MMM. dd, yyyy'}}</footer>
+                          </blockquote>
+                        </li>
+                    </ul>
+            </div>
+      </div>
+
+
+
+    </ion-content>
+</ion-view>

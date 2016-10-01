@@ -1,0 +1,27 @@
+<ion-view title="Login">
+<!--
+     <ion-header-bar align-title="center" class="bar-positive">
+    <h1 class="title">Finder's Point Login</h1>
+    
+  </ion-header-bar>
+-->
+    
+    
+  <ion-content class="padding">
+      
+      <div class="list">
+      <label class="item item-input">
+        <input type="text" placeholder="Email" name="email" ng-model="user.email" autofocus>
+      </label>
+      <label class="item item-input">
+        <input type="password" name="password" placeholder="Password" ng-model="user.password">
+      </label>
+    </div>
+    <button class="button button-full button-assertive" ng-click="login()">
+      Log in
+    </button>
+    <button class="button button-positive button-clear button-full" ui-sref="register">Register now!</button>
+    </ion-content>
+    
+    
+</ion-view>

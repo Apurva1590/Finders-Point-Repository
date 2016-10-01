@@ -1,0 +1,263 @@
+<div class="">
+    <section id="details">
+   <div class="container">
+         <div class="wow fadeInDown">
+    <h1 style="color: #4e4e4e">Professional's Profile</h1>
+
+    <div class="panel-body">
+
+        <button class="btn btn-xs btn-primary pull-right backtoseachbutton" type="button" ui-sref="professionalslist">Back to Search</button> </br>
+<!--
+        <div >
+      {{contact.name}}
+      <p>{{ contact.email }}</p>
+      <p>{{ contact.number }}</p>
+           
+      </div> </br>
+-->
+<!--
+        <div >
+      {{professional.username}}
+      <p>{{ professional.email }}</p>
+      <p>{{ professional.mobile }}</p>
+           
+      </div> </br>
+-->
+    
+        
+        <!-- Details of a person -->
+          
+        <div class="col-xs-12">
+            
+        <div class="card-group" style="width: 80%; margin-left: 110px;">
+             <ul class="list-group list-group-flush">
+       <div class="card" style="height:100px;">
+  
+  <li class="list-group-item">
+        <div class="card-block"  style="height:100px;">
+      <div class="col-sm-2">
+        <img src="../images/person.jpg" class="avatar img-circle image-responsive" alt="avatar" style="height:80px; width: 80px;" >
+        </div>
+        <div>
+            <h5>{{professional.fname}} {{professional.lname}}</h5>
+            <p>{{professional.designation}}</p>
+        </div>
+            </div>
+           </li>
+      </div>
+           <div class="card">
+              
+    <li class="list-group-item">
+        <div class="col-sm-1" style="height:50px; width: 50px;" >
+     <i class="fa fa-envelope faa-shake animated fa-2x"></i>
+        </div>
+        <div >
+            <h5>Email</h5>
+        <p>{{professional.email}}</p>
+       </div> 
+    </li>
+               <li class="list-group-item">
+        <div class="col-sm-1" style="height:50px; width: 50px;" >
+      <i class="fa fa-phone faa-ring animated fa-2x" aria-hidden="true"></i> 
+                       
+        </div>
+        <div >
+            <h5>Phone Number</h5>
+        <p>{{professional.phone}}</p>
+       </div> 
+    </li>
+               <li class="list-group-item">
+        <div class="col-sm-1" style="height:50px; width: 50px;" >
+      <i class="fa fa-mobile faa-float animated fa-2x" aria-hidden="true"></i> 
+        </div>
+        <div >
+            <h5>Mobile Number</h5>
+        <p>{{professional.mobile}}</p>
+       </div> 
+    </li>
+               
+                               
+                <li class="list-group-item">
+        <div class="col-sm-1" style="height:50px; width: 50px;" >
+      <i class="fa fa-server faa-horizontal animated fa-2x" aria-hidden="true"></i> 
+             
+        </div>
+        <div >
+            <h5>Services</h5>
+        <p>{{professional.services}}</p>
+       </div> 
+    </li>
+               
+               <li class="list-group-item">
+        <div class="col-sm-1" style="height:50px; width: 50px;" >
+      <i class="fa fa-map-marker faa-passing animated fa-2x" aria-hidden="true"></i> 
+        </div>
+        <div >
+            <h5>Address</h5>
+        <p>{{professional.address}}</p>
+       </div> 
+    </li>
+               <li class="list-group-item">
+        <div class="col-sm-1" style="height:50px; width: 50px;" >
+      <i class="fa fa-location-arrow faa-flash animated fa-2x" aria-hidden="true"></i> 
+        </div>
+        <div >
+            <h5>City</h5>
+        <p>{{professional.city}}</p>
+       </div> 
+    </li>
+               <li class="list-group-item">
+        <div class="col-sm-1" style="height:50px; width: 50px;" >
+      <i class="fa fa-compass faa-pulse animated fa-2x" aria-hidden="true"></i> 
+        </div>
+        <div >
+            <h5>State</h5>
+        <p>{{professional.state}}</p>
+       </div> 
+    </li>
+               <li class="list-group-item">
+        <div class="col-sm-1" style="height:50px; width: 50px;" >
+      <i class="fa fa-globe faa-vertical animated fa-2x" aria-hidden="true"></i> 
+        </div>
+        <div >
+            <h5>Country</h5>
+        <p>{{professional.country}}</p>
+       </div> 
+    </li>
+               
+                <li class="list-group-item">
+        <div class="col-sm-1" style="height:50px; width: 50px;" >
+      <i class="fa fa-thumb-tack faa-horizontal animated fa-2x" aria-hidden="true"></i> 
+        </div>
+        <div >
+            <h5>Pincode</h5>
+        <p>{{professional.pincode}}</p>
+       </div> 
+    </li>
+               
+                            
+                <li class="list-group-item">
+        <div class="col-sm-1" style="height:50px; width: 50px;" >
+      <i class="fa fa-building faa-wrench animated fa-2x" aria-hidden="true"></i> 
+        </div>
+        <div >
+            <h5>Company</h5>
+        <p>{{professional.company}}</p>
+       </div> 
+    </li>
+               <li class="list-group-item">
+        <div class="col-sm-1" style="height:50px; width: 50px;" >
+      <i class="fa fa-clock-o faa-ring animated fa-2x" aria-hidden="true"></i> 
+        </div>
+        <div >
+            <h5>Time </h5>
+        <p>From: {{professional.timefrom}}  To: {{professional.timeto}} Days: {{professional.days}}</p>
+       </div> 
+    </li>
+               
+               
+               <li class="list-group-item">
+        <div class="col-sm-1" style="height:50px; width: 50px;" >
+      <i class="fa fa-bars faa-tada animated fa-2x" aria-hidden="true"></i> 
+        </div>
+        <div >
+            <h5>Work Details</h5>
+        <p>{{professional.workdescription}}</p>
+       </div> 
+    </li>
+               
+                <li class="list-group-item">
+        <div class="col-sm-1" style="height:50px; width: 50px;" >
+      <i class="fa fa-bars faa-tada animated fa-2x" aria-hidden="true"></i> 
+        </div>
+        <div >
+            <h5>Reviews</h5>
+        <p>{{professional.reviews.comment}}</p>
+       </div> 
+    </li>
+              
+   
+ 
+</div> 
+                  </ul>
+        </div>
+    </div>
+    
+    
+    
+    <!-- Comments -->
+
+    <div class="col-xs-9 col-xs-offset-1">
+        <ul>
+                    <blockquote ng-repeat="review in professional.reviews">
+                        <p>{{review.rating}} Stars</p>
+                        <p>{{review.comment}}</p>
+                        <footer>{{review.author}},  {{review.date}}</footer>
+                    </blockquote>
+                </ul>
+                <ul ng-show="reviewForm.$valid && !reviewForm.$pristine">
+                    <blockquote>
+                        <p>{{reviews.rating}} Stars</p>
+                        <p>{{reviews.comment}}</p>
+                        <footer>{{reviews.author}}, {{reviews.date | date : "dd.MM.y" }}</footer>
+                    </blockquote>
+                </ul>
+        
+        
+     <form class="form-horizontal" name="reviewForm"  novalidate>
+                    <div class="form-group" ng-class="{ 'has-error':
+                        reviewForm.author.$error.required &&
+                        !reviewForm.author.$pristine }">
+                        <label for="author" class="col-sm-2 control-label">Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="author"
+                            name="author" placeholder="Enter Name"
+                            ng-model="reviews.author" required>
+                            <span ng-show="reviewForm.author.$error.required &&
+                                !reviewForm.author.$pristine" class="help-block">
+                                Your name is required.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                    <label for="rating" class="col-sm-2 control-label">Rating</label>
+                            <div class="col-sm-10">
+                            <label class="radio-inline"><input type='radio' name="rating" value="1" ng-model="reviews.rating">1</label>
+                            <label class="radio-inline"><input type='radio' name="rating" value="2" ng-model="reviews.rating">2</label>
+                            <label class="radio-inline"><input type='radio' name="rating" value="3" ng-model="reviews.rating">3</label>
+                            <label class="radio-inline"><input type='radio' name="rating" value="4" ng-model="reviews.rating">4</label>
+                            <label class="radio-inline"><input type='radio' name="rating" value="5" ng-model="reviews.rating" checked>5</label>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error':
+                        reviewForm.comment.$error.required &&
+                        !reviewForm.comment.$pristine }">
+                        <label for="comment" class="col-sm-2 control-label">Comment</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" name="comment" rows="6" ng-model="reviews.comment" required>
+                            </textarea>
+                            <span ng-show="reviewForm.comment.$error.required &&
+                                !reviewForm.comment.$pristine" class="help-block">
+                                Your comment is required.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary" ng-click="submitReview(professional._id)" 
+ ng-disabled="reviewForm.$invalid">Send Review</button>
+                        </div>
+                    </div>
+                </form>
+    
+    </div>
+    
+                
+        
+</div> 
+</div>
+</div>
+    </section>   
+</div>
+
+

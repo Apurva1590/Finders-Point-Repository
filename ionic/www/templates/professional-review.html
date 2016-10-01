@@ -1,0 +1,32 @@
+<ion-modal-view >
+  <ion-header-bar>
+    <h1 class="title">Submit Review on Professional</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeReview()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content style="background-color:#000000;">
+    <form id="reviewForm" name="reviewForm" ng-submit="doReview()">
+      <div class="list">
+        <label class="item item-input item-select">
+          <span class="input-label">Rating</span>
+            <select ng-model="reviews.rating">
+                <option ng-repeat="n in [1,2,3,4,5]" value="{{n}}">{{n}}</option>
+            </select>
+        </label>
+       <label class="item item-input">
+          <span class="input-label">Your Name</span>
+          <input type="text" ng-model="reviews.author">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Your Comment</span>
+          <textarea ng-model="reviews.comment">
+            </textarea>
+          </label>
+        <label class="item">
+          <button class="button button-block button-assertive" type="submit">Submit</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

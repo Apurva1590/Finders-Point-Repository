@@ -1,0 +1,33 @@
+/* Empty. Add your own CSS if you like */
+.custom_button {
+    
+    padding: 0px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#h2_search {
+    margin: 1em 0 0.5em 0;
+    text-align: center;
+	color: #ffffff;
+	font-weight: normal;   
+	font-size: 20px;
+	line-height: 30px;
+	text-transform:none;
+	
+}
+
+#profilepage {
+
+    background-color: #d2322d;
+}
+#about {
+
+    background-color: #d2322d;
+}
+
+#addProf{
+ background-color: #d2322d;
+}

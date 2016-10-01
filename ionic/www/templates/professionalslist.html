@@ -1,0 +1,120 @@
+<ion-view  title="Finder's Point" id="search" style="background-color:#d2322d;">
+    
+    
+<!--
+    <ion-header-bar align-title="center" class="bar-positive">
+       <h1 class="title">Professionals List</h1>
+  </ion-header-bar>
+-->
+   
+  <ion-content class="padding" class="has-header" ng-controller="DetailCtrl">     
+      
+      
+      <div class="list">
+          <h2 id="h2_search">Who are you looking for?</br> </br></h2>
+          
+          <label class="item item-input item-select">
+              <div class="input-label">
+      City
+    </div>
+          <select ng-model="filter.city">
+              <option value="">Select City</option>
+    <option ng-repeat="professional in professional | unique : 'city'" value="{{professional.city}}">{{professional.city}}</option>        </select>       
+          </label>
+          
+          <label class="item item-input item-select">
+             <div class="input-label">
+      Service
+    </div>  
+          <select ng-model="filter.designation">
+              <option value="">Select Service</option>
+    <option ng-repeat="professional in professional | unique : 'designation'" value="{{professional.designation}}">{{professional.designation}}</option>
+              </select>
+          </label>
+          
+         
+             
+          <div class="col text-center" ng-if="filter.designation">
+              <button class="button button-dark button-full" ng-click="showData(filter.designation)">Search</button>
+              </div>
+        
+     </div>  
+
+     
+      
+    
+      
+<div ng-if="searchData">      
+<div class="list">
+        <div class="card" >
+            <div ng-repeat="professional in professional | filter : searchFilter" class="item item-avatar" ng-controller="DetailCtrl" ng-if="professional">
+                    <img src="/img/ionic.png">  
+                     <h3>Name: {{professional.fname}}</h3>
+                     <h3>Email: {{professional.email}}</h3>
+                    <h3>Designation: {{professional.designation}}</h3>
+                     <h3>City: {{professional.city}}</h3>
+                    
+                    <a  ui-sref="details({id: professional._id})">
+        <button class="button button-small button-assertive" ng-click="showProfessionals(professional)" type="submit">View Profile</button>
+        </a>
+                
+            </div>
+            </div>
+            </div>     
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+<!--
+<div class="list">
+        <div class="card" >
+            <div ng-repeat="professional in professional" class="item item-avatar" >
+                    <img src="/img/ionic.png">  
+                     <h3>Name: {{professional.fname}}</h3>
+                     <h3>Email: {{professional.email}}</h3>
+                    <h3>Designation: {{professional.designation}}</h3>
+                     <h3>City: {{professional.city}}</h3>
+                    
+                    <a  ui-sref="details({id: professional._id})">
+        <button class="button button-small button-balanced" ng-click="showProfessionals(professional)" type="submit">View Profile</button>
+        </a>
+                
+            </div>
+            </div>
+            </div>
+-->
+
+      
+      
+<!--
+      
+
+      <ion-list>
+           
+        <ion-item ng-repeat="professional in professional"  href="#/professionalslist/{{professional._id}}" class="item-thumbnail-left">
+         
+                <img ng-src={{baseURL+professional.image}} alt="Image">         
+          
+              <h2>{{professional.fname}} {{professional.lname}}</h2>
+              <p>{{professional.email}}</p>
+                <p>{{professional.designation}}</p>
+                <p>{{professional.city}}</p>
+
+          </ion-item>            
+      </ion-list>
+      
+      
+-->
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,39 @@
+<ion-view title="Your Profile" id="profilepage">
+<!--
+    <ion-header-bar align-title="center" class="bar-positive">
+      <div class="buttons">
+      <button class="button button-clear" ng-click="logout()">Logout</button>
+    </div>
+  </ion-header-bar>
+   
+-->
+    
+  <ion-content class="padding">
+      
+        <div class="card">
+      <h4> &nbsp; Edit My Profile</h4><hr>
+        <div class="list">
+  <label class="item">
+    <span class="input-label"> Profile Picture</span>   
+   <img class="profile-picture" ng-src="{{user.picture || 'http://placehold.it/100x100'}}"></label>
+            
+ 
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Display Name</span>
+    <input type="text" placeholder="Display Name" name="displayname"  ng-model="user.displayName">
+  </label>
+              <label class="item item-input item-stacked-label">
+    <span class="input-label">Email Address</span>
+    <input type="text" placeholder="Email Address" name="email"  ng-model="user.email">
+  </label>
+ 
+              
+    </div>        
+    <button class="button button-block button-positive" ng-click="">
+  Update Information
+</button>
+      
+              
+      </div>
+    </ion-content>
+</ion-view>

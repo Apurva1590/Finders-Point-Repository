@@ -1,0 +1,80 @@
+
+<div class="container" ng-controller="ProfessionalCtrl">
+  <section id="professionalslist">
+     <div class="container">
+         <div class="wow fadeInDown">
+    <h1 style="color: #4e4e4e">Search Professional</h1>
+    <div class="panel-body">
+<!--      <legend><i class="ion-clipboard"></i> Professionals List</legend>-->
+   
+        <form class="form-inline" >
+
+               </form> 
+      
+      <form class="form-inline" role="form" style="text-align: center;">
+           </br></br>
+  <div class="form-group">
+   <select class="form-control" ng-model="filter.city">
+          <option value="">Select City</option>
+    <option ng-repeat="professional in professional | unique : 'city'" value="{{professional.city}}">{{professional.city}}</option>
+  </select>
+  </div>
+  <div class="form-group">
+    <select class="form-control" ng-model="filter.designation">
+      <option value="">Select Service</option>
+    <option ng-repeat="professional in professional | unique : 'designation'" value="{{professional.designation}}">{{professional.designation}}</option>
+  </select>
+  </div>
+  
+ 
+          
+          <div class="form-group" ng-if="filter.designation">
+  <button class="btn btn-primary searchbutton" ng-click="showData(filter.designation)">Search</button>
+            </div>
+</form>
+        </br>
+            
+             </br></br> </br></br></br>
+            
+        
+     <hr>  
+ <div ng-if="searchData">       
+<div  class="card-columns text-center" ng-repeat="professional in professional | filter : searchFilter" ng-controller="DetailCtrl" ng-if="professional">
+        <div class="col-sm-3">
+        <div class="demo-card">
+<div class="card ">
+<h4 class="card-header">{{professional.fname}}</h4>
+    <!--Card image-->
+    <img src="../images/person.jpg" alt="Card image cap">
+    <!--/.Card image-->
+
+    <!--Card content-->
+    <div class="card-block">
+        <!--Title-->
+        <h4 class="card-title">{{professional.email}}</h4>
+        <h4 class="card-title">{{professional.mobile}}</h4>
+        <!--Text-->
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        
+        <a  ui-sref="details({id: professional._id})">
+        <button class="btn btn-primary" ng-click="showProfessionals(professional)" type="submit">View Profile</button>
+        </a>
+        
+    </div>
+    <!--/.Card content-->
+
+</div>
+            </div>
+            </div>
+          </div> 
+          </div> 
+       
+            
+            
+      </div>
+    </div>
+</div>
+    </section>
+</div>
+
+    

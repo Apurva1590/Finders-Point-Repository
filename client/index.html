@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+  <meta charset="utf-8">
+    
+ <title>Finder's Point</title>    
+  <!-- core CSS -->
+    <link href="fp/css/bootstrap.min.css" rel="stylesheet">
+    <link href="fp/css/font-awesome.min.css" rel="stylesheet">
+    <link href="fp/css/animate.min.css" rel="stylesheet">
+    <link href="fp/css/prettyPhoto.css" rel="stylesheet">
+    <link href="fp/css/main.css" rel="stylesheet">
+    <link href="fp/css/style.css" rel="stylesheet">
+    <link href="fp/css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->  
+    
+    
+    
+    
+    
+    <link href="fp/images/icon.png" rel="shortcut icon">
+  <link href="//fonts.googleapis.com/css?family=Roboto|Montserrat:400,700|Open+Sans:400,300,600" rel="stylesheet">
+    
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link  href="/stylesheets/font-awesome-animation.min.css" rel="stylesheet">
+  <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+<!--  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">-->
+     <!-- added later -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     <link href="//cdn.jsdelivr.net/animatecss/3.2.0/animate.css" rel="stylesheet">
+  <link href="/stylesheets/angular-toastr.css" rel="stylesheet">
+  <link href="/stylesheets/styles.css" rel="stylesheet">
+    
+    
+    
+    <link rel="shortcut icon" href="fp/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="fp/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="fp/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="fp/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="fp/images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->  
+    
+    
+  
+<body class="homepage">
+<div ng-controller="NavbarCtrl">
+    <header id="header">
+        
+        <nav class="navbar navbar-inverse" role="banner">
+            <div  class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="fp/images/icon.png" alt="logo"></a>
+                </div>
+				
+                <div class="collapse navbar-collapse navbar-left">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/#/">Home</a></li>
+                         <li ng-if="isAuthenticated()"><a href="/#/profile">Profile</a></li>
+                         <li ng-if="isAuthenticated()"><a href="/#/professionalslist">Search</a></li>
+                         <li ng-if="isAuthenticated()"><a href="/#/professional">Add Professional</a></li>
+  <!--                       <li><a href="services.html">Services</a></li>
+
+                        <li><a href="">How It Works</a></li> 
+                         <li><a href="blog.html">Blog</a></li> 
+-->
+                        <li><a href="/#/about-us">About</a></li>                       
+                        <li><a href="/#/contact-us">Contact</a></li> 
+                       
+<!--
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="blog-item.html">Blog Single</a></li>
+                                <li><a href="pricing.html">Pricing</a></li>
+                                <li><a href="404.html">404</a></li>
+                                <li><a href="shortcodes.html">Shortcodes</a></li>
+                            </ul>
+                        </li>
+-->
+                                               
+                    </ul>
+                </div>
+                 <div class="collapse navbar-collapse  navbar-right">
+                       <div class="nav navbar-nav entry">
+                            <ul  ng-if="!isAuthenticated()" class="entry-block">
+                                 <li><a href="/#/login">Log in</a></li>
+                                <li><a href="/#/signup">Sign up</a></li>
+                            </ul> 
+                            <ul ng-if="isAuthenticated()" class="entry-block">
+    <li><a href="/#/logout">Logout</a></li>
+  </ul>
+                       </div>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+		
+    </header><!--/header-->  
+   
+   <div ui-view></div>   
+   
+
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2016 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">Finder's Point</a>. All Rights Reserved.
+                </div>
+                <div class="col-sm-6">
+                    <ul class="pull-right">
+                        <li><a href="/#/">Home</a></li>
+                        <li><a href="/#/about-us">About Us</a></li>
+                        <li><a href="/#/contact-us">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+    
+   <!-- Third-party Libraries -->
+<script src="/vendor/angular.js"></script> 
+<script src="/vendor/angular-animate.js"></script>
+<script src="/vendor/angular-messages.js"></script>
+<script src="/vendor/angular-resource.js"></script>
+<script src="/vendor/angular-sanitize.js"></script>
+<script src="/vendor/angular-ui-router.js"></script>
+<script src="/vendor/angular-toastr.tpls.js"></script>
+<script src="/vendor/satellizer.js"></script>
+    
+   
+
+<!-- Application Code -->
+<script src="/app.js"></script>
+<script src="/directives/passwordStrength.js"></script>
+<script src="/directives/passwordMatch.js"></script>
+<script src="directives/fileModel.js"></script>
+<script src="/controllers/home.js"></script>
+<script src="/controllers/login.js"></script>
+<script src="/controllers/signup.js"></script>
+<script src="/controllers/logout.js"></script>
+<script src="/controllers/profile.js"></script>
+<script src="/controllers/contactlist.js"></script>
+<script src="/controllers/details.js"></script>
+<script src="/controllers/professional.js"></script>
+<script src="/controllers/navbar.js"></script>
+<script src="/controllers/imageSubmit.js"></script>
+<script src="/services/account.js"></script>
+
+    <script src="fp/js/jquery.js"></script>
+    <script src="fp/js/bootstrap.min.js"></script>
+    <script src="fp/js/jquery.prettyPhoto.js"></script>
+    <script src="fp/js/jquery.isotope.min.js"></script>
+    <script src="fp/js/main.js"></script>
+    <script src="fp/js/wow.min.js"></script>
+    </div>
+</body>
+</html>
